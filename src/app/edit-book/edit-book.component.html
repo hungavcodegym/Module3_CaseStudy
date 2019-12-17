@@ -1,0 +1,24 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="col-8 offset-3">
+  <div class="form-group row">
+    <label class="col-2 col-form-label">ID:</label>
+    <div class="col-10">
+      <input class="form-control" readonly type="text" formControlName="id">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Title:</label>
+    <div class="col-10">
+      <input class="form-control" type="text" formControlName="title">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Body:</label>
+    <div class="col-10">
+      <textarea class="form-control" type="text" formControlName="body"></textarea>
+    </div>
+  </div>
+  <div class=" row col-2 offset-3">
+    <button type="submit" ng-confirm-click="Are you sure?">Submit</button>
+    <button type="button" routerLink="/">Back</button>
+  </div>
+</form>
